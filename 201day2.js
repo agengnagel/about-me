@@ -2,17 +2,20 @@ var userName = prompt('What is your name?');
 console.log('The user said their name is ' + userName);
 alert ('Hello '+ userName + ' lets see how well you know Adrienne. '+ 'Please answer Y or N to the following questions');
 
-var answer1 = prompt('Was Adrienne born in California?').toUpperCase();
-if (answer1 === 'Y') {
+parseInt(correctAnswer = 0)
+var answer1 = prompt('Was Adrienne born in California?')
+.toUpperCase(); if (answer1 === 'Y') {
   alert('Good job!');
   console.log (userName + ' answered '+ answer1);
+  correctAnswer1 = correctAnswer + 1;
 } else if (answer1=== 'N') {
   alert ('Sorry, she was, indeed, born in California');
   console.log (userName + ' answered ' + answer1);
 }else {
-  alert ('Please follow directions');
+  alert ('Please follow directions by answering Y or N');
 }
 
+parseInt(correctAnswer2= correctAnswer1)
 var answer2 = prompt('Is Adrienne over 100 years old?').toUpperCase();
 if (answer2 === 'Y') {
   alert ('You must be crazy.');
@@ -20,43 +23,58 @@ if (answer2 === 'Y') {
 } else if (answer2 === 'N') {
   alert ('Correct. She is 24');
   console.log(userName +' answered '+ answer2);
+  parseInt(correctAnswer2 = correctAnswer1 + 1);
 }else {
-  alert ('Please make sure you are following directions');
+  alert ('Please make sure you are following directions by answering Y or N');
 }
 
+parseInt(correctAnswer3= correctAnswer2)
 var answer3 = prompt('Did Adrienne attend an University of Washington?') .toUpperCase();
 if (answer3 === 'Y') {
   alert ('Heck no, GO COUGS');
   console.log(userName + ' answered '+ answer3);
 } else if (answer3 === 'N') {
   alert ('Correct!');
+  console.log(userName+' answered '+answer3);
+  parseInt(correctAnswer3 = correctAnswer2 + 1);
+}else {
+  alert ('Please follow directions by answering Y or N');
 }
-console.log(userName+' answered '+answer3);
 
+parseInt(correctAnswer4= correctAnswer3)
 var answer4 =prompt ('Has Adrienne been working as a coder for 10 years?') .toUpperCase();
 if (answer4 === 'Y') {
   alert('No, silly');
   console.log(userName +' answered '+answer4)
 } else if (answer4 === 'N') {
   alert ('You are correct');
-  console.log(userName+ ' answered '+answer4)
+  console.log(userName+ ' answered '+answer4);
+  parseInt(correctAnswer4 = correctAnswer3 + 1);
+}else {
+  alert ('Please follow directions by answering Y or N');
 }
 
+parseInt(correctAnswer5= correctAnswer4)
 var answer5 = prompt('Does Adrienne currently want to pursue Ruby on Rails?') .toUpperCase();
 if (answer5 === 'Y') {
   alert ('Not as of now, but maybe in the future');
   console.log(userName + ' answered '+ answer5);
 } else if (answer5 === 'N') {
   alert ('Correct! She wants to learn JavaScript');
+  console.log(userName+ ' answered '+answer5);
+  parseInt(correctAnswer5 = correctAnswer4 + 1);
+}else {
+  alert ('Please follow directions by answering Y or N');
 }
-console.log(userName+ ' answered '+answer5);
 
+parseInt(correctAnswer6= correctAnswer5)
 var wrongAnswer = 0;
 while (guessAge !== 24 && wrongAnswer < 4){
   var guessAge = parseInt (prompt('How old is Adrienne?'));
   console.log( userName + ' guessed ' + guessAge);
   if (guessAge === 24) {
     alert ('You are right');
+    parseInt(correctAnswer6 = correctAnswer5 + 1);
   } else if (guessAge < 24) {
     alert ('Higher');
     wrongAnswer++;
@@ -64,7 +82,7 @@ while (guessAge !== 24 && wrongAnswer < 4){
   } else if (guessAge > 24) {
     alert ('Lower');
     wrongAnswer++;
-    alert('you have gotten this wrong'+ wrongAnswer + ' times.');
+    alert('you have gotten this wrong '+ wrongAnswer + ' times.');
   }
     else {
     alert ('WTF this should not ever happen')
@@ -73,6 +91,7 @@ while (guessAge !== 24 && wrongAnswer < 4){
   }
 };
 
+parseInt(correctAnswer7= correctAnswer6)
 var pets = ['Ally', 'Duke', 'Smokey', 'Jasmine'];
 var petAnswer = prompt('Can you name one of my pets?');
 var passPet = false
@@ -81,6 +100,7 @@ for (var i = 0; i < pets.length; i++) {
   if (petAnswer === pets[i]) {
     passPet = true;
     alert ('YES!')
+    parseInt(correctAnswer7 = correctAnswer6 + 1);
   }
   else {
     prompt('Can you name one of my pets?');
@@ -89,3 +109,5 @@ for (var i = 0; i < pets.length; i++) {
   if (passPet = true) {
     break; }
 }
+
+prompt('you got '+ correctAnswer7+ ' correct!')
