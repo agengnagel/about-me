@@ -51,18 +51,25 @@ if (answer5 === 'Y') {
 }
 console.log(userName+ ' answered '+answer5);
 
-while (guessAge !== 24){
+var wrongAnswer = 0;
+while (guessAge !== 24 && wrongAnswer < 4){
   var guessAge = parseInt (prompt('How old is Adrienne?'));
   console.log( userName + ' guessed ' + guessAge);
   if (guessAge === 24) {
     alert ('You are right');
   } else if (guessAge < 24) {
     alert ('Higher');
+    wrongAnswer++;
+    alert('you have gotten this wrong'+ wrongAnswer + ' times.');
   } else if (guessAge > 24) {
     alert ('Lower');
+    wrongAnswer++;
+    alert('you have gotten this wrong'+ wrongAnswer + ' times.');
   }
     else {
     alert ('WTF this should not ever happen')
+    wrongAnswer++;
+    alert('you have gotten this wrong'+ wrongAnswer + ' times.');
   }
 };
 
