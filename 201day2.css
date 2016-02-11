@@ -1,0 +1,37 @@
+
+body {
+  background-color: #687470;
+}
+
+h1 {
+  font-family:"Courier New", Courier, monospace;
+  font-size: 60px;
+  color: #e0ebeb;
+  text-align: center;
+}
+h2 {
+  font-family:"Courier New", Courier, monospace;
+  font-size: 30px;
+  color: #e0ebeb;
+  text-align: center;
+}
+p {
+  font-family:monospace;
+  font-size: 14px;
+  text-align: center;
+
+}
+
+ul {
+  font-family:monospace;
+  font-size: 15px;
+  font-style: oblique;
+  color:white;
+  text-align: center;
+}
+
+li {
+  font-family:monospace;
+  font-size: 15px;
+  list-style-type: none;
+}
