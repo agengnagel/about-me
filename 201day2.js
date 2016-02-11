@@ -3,10 +3,10 @@ console.log('The user said their name is ' + userName);
 alert ('Hello '+ userName + ' lets see how well you know Adrienne. '+ 'Please answer Y or N to the following questions');
 
 var answer1 = prompt('Was Adrienne born in California?').toUpperCase();
-if (answer1 === "Y") {
+if (answer1 === 'Y') {
   alert('Good job!');
   console.log (userName + ' answered '+ answer1);
-} else if (answer1=== "N") {
+} else if (answer1=== 'N') {
   alert ('Sorry, she was, indeed, born in California');
   console.log (userName + ' answered ' + answer1);
 }else {
@@ -31,13 +31,13 @@ if (answer3 === 'Y') {
 } else if (answer3 === 'N') {
   alert ('Correct!');
 }
-  console.log(userName+ ' answered '+answer3);
+console.log(userName+' answered '+answer3);
 
 var answer4 =prompt ('Has Adrienne been working as a coder for 10 years?') .toUpperCase();
-if (answer4 === "Y") {
-    alert('No, silly');
-    console.log(userName +' answered '+answer4)
-} else if (answer4 === "N") {
+if (answer4 === 'Y') {
+  alert('No, silly');
+  console.log(userName +' answered '+answer4)
+} else if (answer4 === 'N') {
   alert ('You are correct');
   console.log(userName+ ' answered '+answer4)
 }
@@ -49,4 +49,36 @@ if (answer5 === 'Y') {
 } else if (answer5 === 'N') {
   alert ('Correct! She wants to learn JavaScript');
 }
-  console.log(userName+ ' answered '+answer5);
+console.log(userName+ ' answered '+answer5);
+
+while (guessAge !== 24){
+  var guessAge = parseInt (prompt('How old is Adrienne?'));
+  console.log( userName + ' guessed ' + guessAge);
+  if (guessAge === 24) {
+    alert ('You are right');
+  } else if (guessAge < 24) {
+    alert ('Higher');
+  } else if (guessAge > 24) {
+    alert ('Lower');
+  }
+    else {
+    alert ('WTF this should not ever happen')
+  }
+};
+
+var pets = ['Ally', 'Duke', 'Smokey', 'Jasmine'];
+var petAnswer = prompt('Can you name one of my pets?');
+var passPet = false
+for (var i = 0; i < pets.length; i++) {
+  console.log (petAnswer);
+  if (petAnswer === pets[i]) {
+    passPet = true;
+    alert ('YES!')
+  }
+  else {
+    prompt('Can you name one of my pets?');
+    alert ('BooHoo')
+  }
+  if (passPet = true) {
+    break; }
+}
